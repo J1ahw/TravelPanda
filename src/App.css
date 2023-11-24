@@ -1,0 +1,410 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; 
+  border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+  scroll-behavior: smooth;
+}
+
+header{
+  position: fixed;
+  top:0; 
+  left: 0; 
+  right:0;
+  background:#333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:.5rem 5%;
+  z-index: 2;
+}
+
+header .companyName{
+  flex-grow : 1;
+  font-size: 1rem;
+  font-weight: bolder;
+  color:#fff;
+  text-transform: uppercase;
+}
+
+header .companyName span{
+    color: #fdfdfd;
+}
+
+header .navbar{
+  flex-grow: 2;
+  text-align: right;
+}
+
+header .navbar a{
+  color:#fff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin:0 .8rem;
+}
+
+section{
+  padding:2rem 5%;
+}
+
+.btn{
+  display: inline-block;
+  margin: .5rem;
+  background:#ffa500;
+  color:#fff;
+  padding:.5rem 1rem;
+  border:.2rem solid #ffa500;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover{
+  background:rgba(255, 165, 0,.2);
+  color:#ffa500;
+}
+
+.videoContainer{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+}
+
+.videoContainer .content{
+  text-align: center;
+}
+
+.videoContainer .content h3{
+  font-size: 2rem;
+  color:#fff;
+  text-transform: uppercase;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+}
+
+.videoContainer .content p{
+  font-size: 2rem;
+  color:#fffefe;
+  padding:.5rem 0;
+}
+
+.videoContainer .video video{
+  position: absolute;
+  top:0; 
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.videoContainer .controls{
+  padding:0.25rem;
+  border-radius: 1rem;
+  background:rgba(5, 5, 5, 0.7);
+  position: relative;
+  top:3rem;
+}
+
+.videoContainer .controls .vid-btn{
+  height:1rem;
+  width:1rem;
+  display: inline-block;
+  border-radius: 50%;
+  background:#fff;
+  cursor: pointer;
+  margin:0 .5rem;
+}
+
+.videoContainer .controls .vid-btn.active{
+  background:#ffa500;
+} 
+
+.heading{
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.heading span{
+  font-size: 1.5rem;
+  background:rgba(255, 165, 0,.2);
+  color:#ffa500;
+  border-radius: .5rem;
+  padding:.1rem .75rem;
+  margin: 1rem;
+  text-transform:uppercase
+}
+
+.heading span.space{
+  background:none;
+}
+
+.heading span.space{
+  background:none;
+}
+
+.package-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1rem;
+}
+
+.package-container select{
+  height: 65px;
+  background: #eeeaea;
+  border-radius: 10px;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.package-container .countrySelector{
+  width: 15%;
+}
+
+.package-container .citySelector{
+  width: 60%;
+}
+
+.package-container .route-container{
+  flex:1 1 auto;
+  border-radius: .5rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  width: 100%;
+}
+
+.package-container .route-container .city-picture{
+  width: 100%;
+  background-size: contain;
+  height: 5rem;
+}
+
+.package-container .route-container .route{
+  padding:0.25rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border:1rem solid #d2d0d0;
+  border-radius: .5rem; 
+}
+
+.package-container .route-container .route .routeBox h3{
+  font-size:1.5rem;
+  color:#333;
+}
+
+.package-container .route-container .route .routeBox p{
+  font-size:1rem;
+  color:#666;
+  padding:0.1rem 0;
+}
+
+.package-container .route-container .route .routeBox .price{
+  font-size: 1.25rem;
+  color:#333;
+  padding-top: 0.25rem;
+}
+
+.package-container .route-container .route .routeBox .price span{
+  color:#666;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.package-container .route-container .route .routeDetail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.package-container .route-container .route .routeDetail label{
+  font-size: 1.25rem;
+  color:#333;
+  font-weight: bold;
+}
+
+.package-container .route-container .route .routeDetail .routeMap {
+  margin: 1rem;
+  width: 50%;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,.1);
+  border:.5rem solid #fff;
+  border-radius: .5rem;
+}
+
+.package-container .route-container .route .routeDetail .viewPoints{
+  margin: .5rem;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.package-container .route-container .route .routeDetail .viewPoints .viewPoint{
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.package-container .route-container .route .routeDetail .viewPoints .viewPoint img{
+  width: 10rem;
+  height: 10rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border:.5rem solid #fff;
+  border-radius: .5rem;      
+}
+
+.package-container .route-container .route .routeDetail .viewPoints .viewPoint label{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  margin: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;  
+  font-weight: bold;    
+}
+
+.book .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:.5rem;
+  align-items: center;
+}
+
+.book .row .image{
+  flex-grow: 1;
+  flex-basis: 15rem;
+}
+
+.book .row .image img{
+  width:100%;
+}
+
+.book .row form{
+  flex-grow: 1;
+  flex-basis: 20rem;
+  padding:.5rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.book .row form .inputBox{
+  padding:.25rem 0;
+}
+
+.book .row form .inputBox input{
+  width: 100%;
+  padding:.5rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  font-size: .75rem;
+  color:#333;
+  text-transform: none;
+}
+
+.book .row form .inputBox h3{
+  font-size: .75rem;
+  padding:.5rem 0;
+  color:#666;
+}
+
+.contact .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1rem;
+  align-items: center;
+}
+
+.contact .row .image{
+  flex:1 1 25rem;
+}
+
+.contact .row .image img{
+  width:100%;
+}
+
+.contact .row form{
+  flex:1 1 25rem;
+  padding:1rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .row form .inputBox input, .contact .row form textarea{
+  width:49%;
+  margin:1rem 0;
+  padding:1rem;
+  font-size: .75rem;
+  font-weight: bold;
+  color:#333;
+  background:#f7f7f7;
+  text-transform: none;
+}
+
+.contact .row form textarea{
+  height: 6rem;
+  resize: none;
+  width:100%;
+}
+
+.footer{
+  background:#333;
+}
+
+.footer .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1rem;
+}
+
+.footer .box-container .box{
+  padding:1rem 0;
+  flex:1 1 12rem;
+  text-align: center;
+}
+
+.footer .box-container .box h3{
+  font-size: 1.5rem;
+  padding:.5rem 0;
+  color:#fff;
+}
+
+.footer .box-container .box a{
+  display: block;
+  font-size: 1rem;
+  padding:.5rem 0;
+  color:#eee;
+}
+
+.footer .credit{
+  text-align: center;
+  padding:1rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color:#fff;
+  border-top: .1rem solid rgba(255,255,255,.2);
+}
+
+.footer .credit span{
+  color:#ffa500;
+}
+
+.footer .bottom{
+  text-align: center;
+  padding:1rem 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: normal;
+  color:#fff;
+}
